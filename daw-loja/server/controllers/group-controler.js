@@ -1,4 +1,5 @@
 const repository = require('../models/group-repository')
+//demais rotas
 
 module.exports = {
     index: async (req, res) =>{
