@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const PORT = 3333;
-const groupRouter = require('../routes/group-router')
+const groupRouter = require('./routes/group-router')
 
 app.use(express.json);
 
