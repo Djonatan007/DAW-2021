@@ -15,9 +15,9 @@ app.get('/', (req, res) => {
 });
 
 //Demais rotas
-app.use('/cidade', groupRouter);
+app.use('/estado', groupRouter);
 
-app.use('/estado', productRouter)
+app.use('/cidade', productRouter)
 
 app.listen(PORT, () => {
     console.log(`Executando na porta ${PORT}`);

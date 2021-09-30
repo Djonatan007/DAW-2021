@@ -4,12 +4,12 @@ module.exports = {
     
     find: () => {
         //select * from estado
-        return knex.select('p.*', 'g.name as estado_nome').from('estado as p').innerJoin('estado as g', 'g.id', 'p.estado_id');
+        return knex.select().from('estado');
     },
 
     findById: (params) => {
         //select * from estado where id = params.id
-        return knex.select('p.*', 'g.name as estado_nome').from('estado as p').innerJoin('estado as g', 'g.id', 'p.estado_id').where('p.id', params.id);
+        return knex.select().from('estado').where('id', params.id);
     }, 
 
     create: (params) => {

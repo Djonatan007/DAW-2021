@@ -4,12 +4,12 @@ module.exports = {
     
     find: () => {
         //select * from cidade
-        return knex.select('p.*', 'g.name as cidade_nome').from('cidade as p').innerJoin('cidade as g', 'g.id', 'p.cidade_id');
+        return knex.select().from('cidade');
     },
 
     findById: (params) => {
         //select * from cidade where id = params.id
-        return knex.select('p.*', 'g.name as cidade_nome').from('cidade as p').innerJoin('cidade as g', 'g.id', 'p.cidade_id').where('p.id', params.id);
+        return knex.select().from('cidade').where('id', params.id);
     }, 
 
     create: (params) => {

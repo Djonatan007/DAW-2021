@@ -6,7 +6,7 @@ module.exports ={
         //select * from group;
     },
 
-    findById: () =>{
+    findById: (params) =>{
         return knex.select().from('grupo').where('id', params.id);
         //select * from group where id=2
     },
