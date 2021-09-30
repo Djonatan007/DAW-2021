@@ -17,4 +17,4 @@ routes.route('/:id')
     .put(groupController.update)      //Altera o registro com o ID do parâmetro
     .delete(groupController.delete);   //Exclui o registro com o ID do parâmetro
 
-module.exports = routes;
+module.exports = routes;    
