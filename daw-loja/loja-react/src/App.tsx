@@ -1,28 +1,26 @@
+import { Brands } from "./components/Brands";
+import { Collection } from "./components/Collection";
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
+import { Newsletter } from "./components/Newsletter";
+import { Products } from "./components/Products";
+
+
 function App() {
   return (
-    <div>
-      <header className="navbar navbar-expand navbar-light">
-        <div className="container">
-          <h1 className="navbar-brand">DAW Loja</h1>
-
-          <nav>
-            <ul className="navbar-nav">
-              <li className="nav-item">
-                <a className="nav-link active" href="#">Home</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Produtos</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Sobre</a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">Contato</a>
-              </li>
-            </ul>
-          </nav>
+    <div>       
+      <Header/>
+    <main>
+    <div className="container">
+            <Collection/>
+            <Products/>
         </div>
-      </header>
+          <Newsletter/>
+            <div className="container">
+              <Brands/>
+            </div>
+    </main>
+      <Footer/>
     </div>
   );
 }

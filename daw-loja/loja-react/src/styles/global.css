@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: white;
+    color: #29292e;
+}
+
+
+
+.products,
+.collection{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    margin: 32px 0;
+    justify-content: center;
+}
+
+.products .card-body h5,
+.collection .card-body h5 {
+    font-weight: 400;
+    text-align: center;
+}

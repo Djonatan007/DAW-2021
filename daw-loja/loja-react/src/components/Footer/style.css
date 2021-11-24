@@ -1,0 +1,28 @@
+
+footer {
+    background-color: #515d6a;
+    padding: 48px 0;
+    color: white;
+}
+
+footer .container col {
+    justify-content: center;
+}
+
+footer h5 {
+    margin: 0 0 32px 48px;
+}
+
+footer ul {
+    list-style: none;
+    margin-left: 16px;
+}
+
+footer li a{
+    color: white;
+    text-decoration: none;
+}
+
+footer li a:hover{
+    color: white;
+}
