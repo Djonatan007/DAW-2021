@@ -1,20 +1,20 @@
-import imgBrands1 from "../../assets/images/brand1.png"
-import imgBrands2 from "../../assets/images/brand2.png"
-import imgBrands3 from "../../assets/images/brand3.png"
-import imgBrands4 from "../../assets/images/brand4.png"
-import imgBrands5 from "../../assets/images/brand5.png"
+import { Brand } from "../../@types"
 import './style.css'
 
-export function Brands(){
+type BrandProps = {
+    items: Array<Brand>;
+}
+
+export function Brands(props: BrandProps){
     return(
         <div className="brands">
-        <ul>
-            <li><img src={imgBrands1}/></li>
-            <li><img src={imgBrands2}/></li>
-            <li><img src={imgBrands3}/></li>
-            <li><img src={imgBrands4}/></li>
-            <li><img src={imgBrands5}/></li>
-        </ul>
-    </div>
+            <ul>
+            {props.items.map(item => {
+            return(
+                <li><img src={item.source} alt={item.alt}/></li>
+            )
+            })}
+            </ul>    
+        </div>
     )
 }
