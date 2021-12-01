@@ -1,13 +1,21 @@
+import { Product } from "../../@types"
 import './style.css'
 
-export function Products(){
+type ProductsProps = {
+    items: Array<Product>;
+}
+
+export function Products(props: ProductsProps){
     return(
         <div className="products">
-        <div className="card">
-            <img src="assets/images/product1.jpg"/>
+        {props.items.map(item => {
+            return(
+            <div className="card">
+            <img src={`assets/images/${item.photo}`}/>
             <div className="card-body">
-                <h5>Conjunto de casaco e calça preto</h5>
+                <h5>{item.name}</h5>
                 <div className="details">
+                    
                     <div className="star-rating">
                         <i className="bi bi-star-fill"></i>
                         <i className="bi bi-star-fill"></i>
@@ -16,51 +24,13 @@ export function Products(){
                         <i className="bi bi-star"></i>
                     </div>
                     <div className="price">
-                        <h3>R$:600,00</h3>
-                        <p>Em até 10x sem juros</p>
+                        <h3>R$: {item.price}</h3>
+                        <p>10 x RS {item.price / 10} Sem juros</p>
                     </div>
                 </div>
             </div>
         </div>
-        <div className="card">
-            <img src="assets/images/product2.jpg"/>
-            <div className="card-body">
-                <h5>Conjunto de casaco e calça jeans</h5>
-                <div className="details">
-                    <div className="star-rating">
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star"></i>
-                    </div>
-                    <div className="price">
-                        <h3>R$:600,00</h3>
-                        <p>Em até 10x sem juros</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div className="card">
-            <img src="assets/images/product3.jpg"/>
-            <div className="card-body">
-                <h5>Vestido preto e vermelho </h5>
-                <div className="details">
-                    <div className="star-rating">
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                        <i className="bi bi-star-fill"></i>
-                    </div>
-                    <div className="price">
-                        <h3>R$:600,00</h3>
-                        <p>Em até 10x sem juros</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
+        )})}
     </div>
     )
 }
